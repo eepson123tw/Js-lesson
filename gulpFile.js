@@ -20,7 +20,7 @@ const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 
 
-watch('./app/page/*html', includeHtml);
+
 exports.renew = series(cleanAll, parallel(htmlStyle, sassStyle, jsStyle, includeHtml));
 
 
@@ -60,6 +60,13 @@ exports.watch = function watchAll() {
     watch('./app/page/*html', includeHtml);
 }
 
+
+
+
+
+
+
+
 function includeHtml() {
     return src(['./app/*.html']) //來源
         .pipe(fileinclude({
@@ -68,3 +75,17 @@ function includeHtml() {
         }))
         .pipe(dest('./dist')); //目的地
 };
+
+
+exports.browser = function browsersync() {
+    browserSync.init({
+        server: {
+            baseDir: "./dist", //跟目錄設定
+            index: "jsWeekOne.html"
+        }
+    });
+    watch('./app/style/*.scss', sassStyle).on('change', reload); //與browser同步
+    watch('./app/*.html', includeHtml).on('change', reload); //與browser同步
+    watch('./app/js/*.js', jsStyle).on('change', reload); //與browser同步
+
+}

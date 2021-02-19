@@ -18,7 +18,8 @@
     "scripts": {
         "dev": "npm install",
         "renew": "gulp renew",
-        "watch": "gulp watch"
+        "watch": "gulp watch",
+        "sync": "gulp browser"
     },
     "repository": {
         "type": "git",
