@@ -42,6 +42,18 @@ a {
     list-style: outside;
 }
 
+.btn {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid oldlace;
+    font-size: 20px;
+    margin-left: 25%;
+    &__text {
+        color: black;
+    }
+}
+
 .title__text--active {
     color: brown;
 }
