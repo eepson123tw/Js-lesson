@@ -1,0 +1,33 @@
+{
+    "name": "js-lesson",
+    "version": "1.0.0",
+    "description": "",
+    "main": "gulpFile.js",
+    "dependencies": {},
+    "devDependencies": {
+        "browser-sync": "^2.26.14",
+        "concat": "^1.0.3",
+        "gulp": "^4.0.2",
+        "gulp-clean": "^0.4.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-file-include": "^2.3.0",
+        "gulp-sass": "^4.1.0",
+        "node-sass": "^5.0.0",
+        "sass": "^1.32.8"
+    },
+    "scripts": {
+        "dev": "npm install",
+        "renew": "gulp renew",
+        "watch": "gulp watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/eepson123tw/Js-lesson.git"
+    },
+    "author": "allen chou",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/eepson123tw/Js-lesson/issues"
+    },
+    "homepage": "https://github.com/eepson123tw/Js-lesson#readme"
+}

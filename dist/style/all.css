@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+html,
+body {
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 2; }
+
+a {
+  text-decoration: none; }
+
+.title {
+  display: flex;
+  background-color: gainsboro;
+  justify-content: space-between;
+  padding: 30px 20px 20px 20px; }
+
+.title__text {
+  color: black; }
+
+.title__text--active {
+  color: brown; }
