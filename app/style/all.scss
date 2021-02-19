@@ -37,9 +37,20 @@ a {
 }
 
 .q7 {
-    margin-top: 50px;
     margin-left: 30px;
     list-style: outside;
+    padding: 20px;
+    &--lh {
+        line-height: 5;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+}
+
+.item {
+    display: flex;
 }
 
 .btn {

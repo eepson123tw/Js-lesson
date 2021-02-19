@@ -89,3 +89,35 @@ console.log(`${person}的帳單總共${bill}元`);
 
 //第十題
 //g 字串  h 數值  i字串　ｊ　布林值　ｋ　數值  l 數值
+
+
+
+//第十一題
+
+let btn = document.querySelectorAll('.js__btnadd');
+const span = document.querySelector('.js__cost');
+let mincost = 0;
+
+console.log(btn);
+btn.forEach((item) => {
+
+    item.addEventListener('click', function(e) {
+
+        let cost = e.target.dataset['cost'] * 1;
+        mincost += cost;
+
+        span.innerText = mincost;
+
+        if (mincost >= 2000) {
+
+            alert('你也買太多了吧~~~')
+            return;
+
+        } else {
+            console.log(`小明還能買!!!`)
+        }
+
+    })
+
+
+})

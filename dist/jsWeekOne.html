@@ -11,36 +11,36 @@
 
 <body>
     <header>
-        <ul class="title">
-            <li>
-                <a class="title__text title__text--active" href="jsWeekOne.html">第一週</a>
-            </li>
-            <li>
-                <a href="#">第二週</a>
-            </li>
-            <li>
-                <a href="#">第三週</a>
-            </li>
-            <li>
-                <a href="#">第四週</a>
-            </li>
-            <li>
-                <a href="#">第五週</a>
-            </li>
-            <li>
-                <a href="#">第六週</a>
-            </li>
-            <li>
-                <a href="#">第七週</a>
-            </li>
-            <li>
-                <a href="#">第八週</a>
-            </li>
-            <li>
-                <a href="#">第九週</a>
-            </li>
-        </ul>
-    </header>
+    <ul class="title">
+        <li>
+            <a class="title__text title__text--active" href="jsWeekOne.html">第一週</a>
+        </li>
+        <li>
+            <a href="#">第二週</a>
+        </li>
+        <li>
+            <a href="#">第三週</a>
+        </li>
+        <li>
+            <a href="#">第四週</a>
+        </li>
+        <li>
+            <a href="#">第五週</a>
+        </li>
+        <li>
+            <a href="#">第六週</a>
+        </li>
+        <li>
+            <a href="#">第七週</a>
+        </li>
+        <li>
+            <a href="#">第八週</a>
+        </li>
+        <li>
+            <a href="#">第九週</a>
+        </li>
+    </ul>
+</header>
 
     <div>
         <h1 class="title__part">
@@ -50,22 +50,36 @@
             請打開console or Sources,謝謝!
         </p>
     </div>
-    <div class="q7">
-        <h3>第七題:變數記憶體指向</h3>
-        <img src="./img/ramPath.PNG" alt="">
-        <ol>
-            <li>畫得很爛XD</li>
-            <li>當 d 宣告時,產生新的記憶體空間紀錄1。</li>
-            <li>當 e 宣告時,產生新的記憶體空間紀錄1。</li>
-            <li>當 f 宣告時,產生新的記憶體空間紀錄2(取d跟e的記憶體中的值運算) 。</li>
-            <li>e 賦值時,產生新的記憶體空間紀錄1(並取e原先的記憶體中的值運算) 。</li>
-            <li> e 運算時,產生新的記憶體空間紀錄2。</li>
-        </ol>
-        <button class="btn"><a
-                class="btn__text"
-                href="index.html"
-            >回首頁</a></button>
+    <div class="item">
+        <div class="q7">
+            <h3>第七題:變數記憶體指向</h3>
+            <img src="./img/ramPath.PNG" alt="">
+            <ol>
+                <li>畫得很爛XD</li>
+                <li>當 d 宣告時,產生新的記憶體空間紀錄1。</li>
+                <li>當 e 宣告時,產生新的記憶體空間紀錄1。</li>
+                <li>當 f 宣告時,產生新的記憶體空間紀錄2(取d跟e的記憶體中的值運算) 。</li>
+                <li>e 賦值時,產生新的記憶體空間紀錄1(並取e原先的記憶體中的值運算) 。</li>
+                <li> e 運算時,產生新的記憶體空間紀錄2。</li>
+            </ol>
+            <button class="btn"><a
+                    class="btn__text"
+                    href="index.html"
+                >回首頁</a></button>
+        </div>
+        <div class="q7--lh">
+            <h3>第十一題:自定義題目</h3>
+            <p>小明去買飯</p>
+            <main>
+                <p>牛排500元一個 <button data-cost="500" class="js__btnadd">買起來</button></p>
+                <p>豬排200元一個 <button data-cost="200" class="js__btnadd">買起來</button></p>
+            </main>
+            <p>共花了<span class="js__cost"></span>元</p>
+
+        </div>
+
     </div>
+
 
 
     <script src="js/all.js"></script>
