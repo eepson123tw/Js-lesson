@@ -21,7 +21,7 @@ const reload = browserSync.reload;
 
 
 
-exports.renew = series(cleanAll, parallel(htmlStyle, sassStyle, jsStyle, includeHtml));
+exports.renew = series(cleanAll, parallel(imgStyle, htmlStyle, sassStyle, jsStyle, includeHtml));
 
 
 function cleanAll() {
@@ -46,6 +46,11 @@ function jsStyle() {
 
 }
 
+function imgStyle() {
+    return src('./app/img/*')
+        .pipe(dest("./dist/img"));
+
+}
 
 function htmlStyle() {
     return src('./app/*.html')
