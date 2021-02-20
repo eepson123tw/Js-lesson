@@ -5,12 +5,22 @@
 html,
 body {
   max-width: 1400px;
+  min-width: 576px;
   margin: 0 auto;
   font-family: 'Courier New', Courier, monospace;
   line-height: 2; }
 
 a {
   text-decoration: none; }
+
+.index {
+  background-color: floralwhite; }
+  .index__title {
+    padding: 20px;
+    text-align: center;
+    background-color: floralwhite; }
+  .index__text {
+    font-size: 1rem; }
 
 .title {
   display: flex;
@@ -27,6 +37,8 @@ a {
     .title__text--small {
       text-align: left;
       padding-left: 20px; }
+    .title__text--active {
+      color: coral; }
 
 .q7 {
   margin-left: 30px;
@@ -51,6 +63,3 @@ a {
   margin-left: 25%; }
   .btn__text {
     color: black; }
-
-.title__text--active {
-  color: brown; }

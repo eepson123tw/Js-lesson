@@ -21,7 +21,7 @@ const reload = browserSync.reload;
 
 
 
-exports.renew = series(cleanAll, parallel(imgStyle, htmlStyle, sassStyle, jsStyle, includeHtml));
+exports.renew = series(cleanAll, parallel(imgStyle, sassStyle, jsStyle, includeHtml));
 
 
 function cleanAll() {
@@ -86,7 +86,7 @@ exports.browser = function browsersync() {
     browserSync.init({
         server: {
             baseDir: "./dist", //跟目錄設定
-            index: "jsWeekOne.html"
+            index: "index.html"
         }
     });
     watch('./app/style/*.scss', sassStyle).on('change', reload); //與browser同步
