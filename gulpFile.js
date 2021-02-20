@@ -90,7 +90,8 @@ exports.browser = function browsersync() {
         }
     });
     watch('./app/style/*.scss', sassStyle).on('change', reload); //與browser同步
-    watch('./app/*.html', includeHtml).on('change', reload); //與browser同步
+    watch('./app/**/*.html', includeHtml).on('change', reload); //與browser同步
+    watch('./app/img/*', imgStyle).on('change', reload); //與browser同步
     watch('./app/js/*.js', jsStyle).on('change', reload); //與browser同步
 
 }
