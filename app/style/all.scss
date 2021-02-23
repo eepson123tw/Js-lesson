@@ -68,6 +68,9 @@ a {
 
 .item {
     display: flex;
+    &__img {
+        width: 75%;
+    }
 }
 
 .btn {

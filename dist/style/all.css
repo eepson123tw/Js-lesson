@@ -53,6 +53,8 @@ a {
 
 .item {
   display: flex; }
+  .item__img {
+    width: 75%; }
 
 .btn {
   padding: 10px;
