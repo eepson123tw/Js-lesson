@@ -16,13 +16,13 @@ console.log(target.name, target.janeold, target.phoneNumber, target.isWakeUp);
 
 const min = "小明";
 const store = "六角飯館";
-let fishSteakPrice = 30;
-let steakPrice = 50;
-let ricePrice = 10;
+
+const steakPrice = 50;
+const ricePrice = 10;
 
 let walletTotal = 200;
 let cost = 0;
-cost = ricePrice * 2 + steakPrice * 2 + fishSteakPrice * 5
+cost = ricePrice * 2 + steakPrice * 10;
 
 if (walletTotal - cost >= 0) {
     console.log(`${min}買完飯了,一共剩下${walletTotal - cost}元`);
