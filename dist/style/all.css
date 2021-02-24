@@ -65,3 +65,22 @@ a {
   margin-left: 25%; }
   .btn__text {
     color: black; }
+
+.robot {
+  margin-top: 50px;
+  background-color: aliceblue;
+  box-shadow: 1px 3px 3px black;
+  text-align: center;
+  line-height: 5;
+  padding: 20px;
+  border-radius: 20px; }
+  .robot__title {
+    font-size: 4vh;
+    color: silver;
+    font-weight: 900; }
+  .robot__btn {
+    margin: 20px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background-color: green;
+    color: white; }
