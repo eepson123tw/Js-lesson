@@ -233,21 +233,30 @@ function bmiCount() {
 
   let bmi = personWeight / Math.pow(personHeight, 2);
 
+  bmi = bmi.toFixed(2);
+
   if (personHeight && personWeight) {
     if (bmi < 18.5) {
-      status.innerText = "過輕"
+      status.innerText = "過輕";
+      bmiArea.innerText = bmi;
     } else if (18.5 <= bmi && bmi < 24) {
-      status.innerText = "正常"
+      status.innerText = "正常";
+      bmiArea.innerText = bmi;
     } else if (24 <= bmi && bmi < 27) {
-      status.innerText = "過重"
+      status.innerText = "過重";
+      bmiArea.innerText = bmi;
     } else if (27 <= bmi && bmi < 30) {
-      status.innerText = "輕度肥胖"
+      status.innerText = "輕度肥胖";
+      bmiArea.innerText = bmi;
     } else if (30 <= bmi && bmi < 35) {
-      status.innerText = "中度肥胖"
+      status.innerText = "中度肥胖";
+      bmiArea.innerText = bmi;
     } else if (bmi >= 35) {
-      status.innerText = "重度肥胖"
+      status.innerText = "重度肥胖";
+      bmiArea.innerText = bmi;
     } else {
-      status.innerText = "鼻要鬧了拉"
+      status.innerText = "鼻要鬧了拉";
+      bmiArea.innerText = bmi;
     }
 
   } else {
