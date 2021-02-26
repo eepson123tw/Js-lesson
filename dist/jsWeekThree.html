@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style/all.css">
-  <title>JsWeekTwo</title>
+  <title>JsWeekThree</title>
 </head>
 
 <body>
@@ -42,26 +42,41 @@
     </li>
   </ul>
 </header>
-
   <div>
     <h1 class="title__part">
-      第二週:邏輯判斷
+      第三週:物件及陣列資料
     </h1>
     <p class="title__text--small">
       請打開console or Sources,謝謝!
     </p>
 
-  </div>
-  <section class="robot">
-    <h2 class="robot__title">猜拳機器人</h2>
-    <div class="js__Area__button "></div>
 
-    <P>機器人出：<span class="robot__use"></span></P>
-    <P>你出：<span class="user__use"></span></P>
-    <p class="robot__text">共比了<span class="raceNum"></span>場!!!!!!!!</p>
-  </section>
+    <section class="robot">
+      <h2 class="robot__title">計算ＢＭＩ</h2>
+      <div>
+        <label for="height">請輸入身高:</label>
+        <input class="js__height" placeholder="cm" id="height" type="text">
+        <label for="weight">請輸入體重:</label>
+        <input class="js__weight" placeholder="kg" id="weight" type="text">
+        <button class="js__send">確認送出</button>
+
+        <p class="robot__text">您的ＢＭＩ為:<span class="js__bmi"></span></p>
+        <p class="robot__text">目前狀態為：<span class="js__status"></span></p>
+
+
+
+      </div>
+
+
+    </section>
+  </div>
+
+
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js' integrity='sha512-otOZr2EcknK9a5aa3BbMR9XOjYKtxxscwyRHN6zmdXuRfJ5uApkHB7cz1laWk2g8RKLzV9qv/fl3RPwfCuoxHQ==' crossorigin='anonymous'></script>
   <script src="js/all.js"></script>
-  <script src="js/weektwo.js"></script>
+  <script src="js/weekthree.js"></script>
 </body>
 
 </html>

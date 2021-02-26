@@ -84,3 +84,12 @@ a {
     border-radius: 5px;
     background-color: green;
     color: white; }
+  .robot__text {
+    text-align: left;
+    margin-left: 20%;
+    font-size: 3vh;
+    color: #da6c6c; }
+
+input {
+  padding: 10px 20px;
+  font-size: 3vh; }
