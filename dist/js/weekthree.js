@@ -39,13 +39,21 @@ console.log(`-------第四題開始-------`);
 let data = {};
 
 fetch('https://api.kcg.gov.tw/api/service/get/9c8e1450-e833-499c-8320-29b36b7ace5c', { method: 'get' }).then((res) => {
-
-  console.log(res);
-  if (!res.data) {
-    console.log(`第四題：data 去哪裡拉～`);
-    console.log(`因為ajax的關係我會等程式碼都跑完，才執行`)
+  const data = res.json();
+  return data;
+}).then((res) => {
+  const dataList = res.data.XML_Head.Infos.Info;
+  return dataList;
+}).then((res) => {
+  console.log(res, res.length);
+  for (let num in res) {
+    // console.log(res[num]);
+    if (res[num].Name == '佛光山') {
+      console.log(res[num]);
+      console.log(`${res[num]['Px']}:座標`);
+    };
   }
-});
+})
 
 
 console.log(`-------第五題開始-------`);
@@ -202,8 +210,9 @@ console.log(`-------第9題開始-------`);
 console.log(`我選擇高雄市文化局演出活動，這是一個陣列包著多個物件，裡面有13個屬性跟各自的值`);
 
 
-axios.get('./dataJson.json').then((res) => {
-  console.log(res);
+fetch('https://data.kcg.gov.tw/dataset/a98754a3-3446-4c9a-abfc-58dc49f2158c/resource/48d4dfc4-a4b2-44a5-bdec-70f9558cd25d/download/yopendata1070622opendatajson-1070622.json', { method: 'get' }).then((res) => {
+  console.log(res.json());
+
 })
 
 
