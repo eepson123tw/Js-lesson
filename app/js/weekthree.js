@@ -220,7 +220,7 @@ fetch('https://data.kcg.gov.tw/dataset/a98754a3-3446-4c9a-abfc-58dc49f2158c/reso
 
 
 
-console.log(`-------第10題開始+自定義-------`);
+console.log(`--------第10題開始+自定義-------`);
 
 let input = document.querySelectorAll('input');
 
