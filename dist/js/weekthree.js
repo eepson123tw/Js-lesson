@@ -4,7 +4,7 @@ let obj = {
 
   myName: "Tom",
   age: 18,
-  pets: ["john", "Mike"],
+  pets: ["John", "Mike"],
   isWakeUp: false
 
 }
@@ -63,7 +63,7 @@ const familyPhoto = {
   motherName: "Jane",
   fatherName: "Bill",
   daughterName: "Rosa",
-  sanName: "Howard",
+  sonName: "Howard",
   dogsName: ["Bobo", "Koko"]
 
 };
@@ -74,7 +74,7 @@ const sellVilla = {
   villaName: "六角大別墅",
   position: "高雄市",
   villaDataList: [{
-    sellPrice: "2億8千萬",
+    sellPrice: 280000000,
     squareFeet: 900,
     hasPowl: false,
     hasBasement: true,
@@ -83,7 +83,7 @@ const sellVilla = {
     hasHousekeeper: false,
     villaSold: true,
   }, {
-    sellPrice: "3億2千萬",
+    sellPrice: 320000000,
     squareFeet: 1200,
     hasPowl: true,
     hasBasement: true,
@@ -185,13 +185,13 @@ let salaryData = {
 
 }
 
-let stafflist = salaryData['staff'];
+let staffList = salaryData['staff'];
 
-for (let staffNum in stafflist) {
+for (let staffNum in staffList) {
   // 第一位員工加薪邏輯
-  if (stafflist[staffNum].staffWorkHard) {
+  if (staffList[staffNum].staffWorkHard) {
 
-    stafflist[staffNum].salary = 40000;
+    staffList[staffNum].salary = 40000;
     // 請填寫第一位員工加薪程式碼
 
   }
@@ -207,7 +207,7 @@ console.log(salaryData);
 
 console.log(`-------第9題開始-------`);
 
-console.log(`我選擇高雄市文化局演出活動，這是一個陣列包著多個物件，裡面有13個屬性跟各自的值`);
+console.log(`我選擇高雄市文化局演出活動，這是一個陣列包著多個物件，裡面有15個屬性跟各自的值`);
 
 
 fetch('https://data.kcg.gov.tw/dataset/a98754a3-3446-4c9a-abfc-58dc49f2158c/resource/48d4dfc4-a4b2-44a5-bdec-70f9558cd25d/download/yopendata1070622opendatajson-1070622.json', { method: 'get' }).then((res) => {
