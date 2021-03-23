@@ -34,7 +34,7 @@ function cleanAll() {
 
 function sassStyle() {
 
-    return src('./app/style/*.scss')
+    return src('./app/style/all.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(dest("./dist/style"));
 
@@ -59,7 +59,7 @@ function htmlStyle() {
 
 exports.watch = function watchAll() {
 
-    watch('./app/style/*.scss', sassStyle);
+    watch('./app/style/**/*.scss', sassStyle);
     watch('./app/*.html', htmlStyle);
     watch('./app/js/*.js', jsStyle);
     watch('./app/page/*html', includeHtml);
@@ -89,7 +89,7 @@ exports.browser = function browsersync() {
             index: "index.html"
         }
     });
-    watch('./app/style/*.scss', sassStyle).on('change', reload); //與browser同步
+    watch('./app/style/**/*.scss', sassStyle).on('change', reload); //與browser同步
     watch('./app/**/*.html', includeHtml).on('change', reload); //與browser同步
     watch('./app/img/*', imgStyle).on('change', reload); //與browser同步
     watch('./app/js/*.js', jsStyle).on('change', reload); //與browser同步

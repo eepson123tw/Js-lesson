@@ -1,0 +1,172 @@
+//
+$grid-num:12;
+$gutter-width :40px;
+$gutter-lg: 28px; //pad-pro
+$grid-lg-column: 6;
+$gutter-sm: 12px; //mobile
+$grid-sm-column: 4;
+// container-------------------------------------------------------------
+$container-max-widths: 1400px;
+$container-padding: 40px;
+$container-lg-padding: 20px;
+$container-sm-padding: 16px;
+// breakpoints----------------------------------------------------
+$break-point-xs: 414px; //mobile-xs
+$break-point-sm: 576px; //mobile
+$break-point-md: 768px; //pad
+$break-point-lg: 992px; //pad-pro
+$break-point-xl: 1200px; //notebook
+$break-points: ( xs: $break-point-xs, sm: $break-point-sm, md: $break-point-md, lg: $break-point-lg, xl: $break-point-xl, );
+@mixin rwd-xl {
+    //notebook
+    @media (max-width: $break-point-xl) {
+        @content;
+    }
+}
+
+@mixin rwd-lg {
+    //pad-pro
+    @media (max-width: $break-point-lg) {
+        @content;
+    }
+}
+
+@mixin rwd-md {
+    //pad
+    @media (max-width: $break-point-md) {
+        @content;
+    }
+}
+
+@mixin rwd-sm {
+    //mobile
+    @media (max-width: $break-point-sm) {
+        @content;
+    }
+}
+
+@mixin rwd-xs {
+    ///mobile-xs
+    @media (max-width: $break-point-xs) {
+        @content;
+    }
+}
+
+//custom rwd------
+//example: @include rwd(720px){ coding... }
+@mixin rwd($width) {
+    @media (max-width: $width) {
+        @content
+    }
+}
+
+;
+%no-gutter {
+    margin: 0;
+    padding: 0;
+}
+
+.no-gutter {
+    margin: 0;
+    padding: 0;
+    @for $i from 1 to $grid-num+1 {
+        .col-#{$i} {
+            @extend %no-gutter;
+        }
+    }
+    @each $key,
+    $value in $break-points {
+        @for $i from 1 to $grid-num+1 {
+            .col-#{$key}-#{$i} {
+                @extend %no-gutter;
+            }
+        }
+    }
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding-left: $gutter-width/2;
+    padding-right: $gutter-width/2;
+    @include rwd($container-max-widths) {
+        // width: 100%;
+        padding-right: $container-padding;
+        padding-left: $container-padding;
+    }
+    @include rwd-lg {
+        padding-right: $container-lg-padding;
+        padding-left: $container-lg-padding;
+    }
+    @include rwd-sm {
+        padding-right: $container-sm-padding;
+        padding-left: $container-sm-padding;
+    }
+}
+
+.row {
+    display: flex;
+    margin-left: -($gutter-width/2);
+    margin-right: -($gutter-width/2);
+    flex-wrap: wrap;
+    @include rwd-lg {
+        margin-left: -$gutter-lg / 2;
+        margin-right: -$gutter-lg / 2;
+    }
+    @include rwd-sm {
+        margin-left: -$gutter-sm / 2;
+        margin-right: -$gutter-sm / 2;
+    }
+}
+
+%col {
+    // 這段不會編譯
+    position: relative;
+    min-height: 1px;
+    padding-left: $gutter-width/2;
+    padding-right: $gutter-width/2;
+    max-width: 100%;
+    flex: 0 0 100%;
+}
+
+@mixin makeCol($breakpoint: null, $gutter-width:40px, $grid-num:12) {
+    @for $i from 0 through $grid-num {
+        @if ($i==0) {
+            .col {
+                padding-left: $gutter-width / 2;
+                padding-right: $gutter-width / 2;
+                flex-basis: 0;
+                flex-grow: 1;
+                max-width: 100%;
+                position: relative;
+            }
+            .offset-#{$i} {
+                margin-left: 0;
+            }
+        }
+        @else {
+            .col-#{$breakpoint}#{$i} {
+                position: relative;
+                padding-left: $gutter-width/ 2;
+                padding-right: $gutter-width/ 2;
+                flex: 0 0 ($i / $grid-num) * 100%;
+                max-width: ($i / $grid-num) * 100%;
+            }
+            .offset-#{$breakpoint}#{$i} {
+                margin-left: calc( #{$i} / #{$grid-num} * 100%);
+            }
+        }
+    }
+}
+
+@include makeCol(null, $gutter-width, $grid-num);
+@include rwd-lg {
+    @include makeCol(lg-, $gutter-lg, $grid-lg-column);
+}
+
+;
+@include rwd-sm {
+    @include makeCol(sm-, $gutter-sm, $grid-sm-column);
+}
+
+;
