@@ -21,7 +21,7 @@ const reload = browserSync.reload;
 
 
 
-exports.renew = series(cleanAll, parallel(imgStyle, sassStyle, jsStyle, includeHtml));
+exports.renew = series(cleanAll, parallel(imgStyle, sassStyle, pageStyle, jsStyle, includeHtml));
 
 
 function cleanAll() {
@@ -39,6 +39,17 @@ function sassStyle() {
         .pipe(dest("./dist/style"));
 
 }
+
+
+function pageStyle() {
+
+    return src('./app/style/pages/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(dest("./dist/style/pages"));
+
+}
+
+
 
 function jsStyle() {
     return src('./app/js/*.js')
@@ -60,15 +71,11 @@ function htmlStyle() {
 exports.watch = function watchAll() {
 
     watch('./app/style/**/*.scss', sassStyle);
+    watch('./app/style/pages/*.scss', pageStyle);
     watch('./app/*.html', htmlStyle);
     watch('./app/js/*.js', jsStyle);
     watch('./app/page/*html', includeHtml);
 }
-
-
-
-
-
 
 
 
@@ -90,6 +97,7 @@ exports.browser = function browsersync() {
         }
     });
     watch('./app/style/**/*.scss', sassStyle).on('change', reload); //與browser同步
+    watch('./app/style/pages/*.scss', pageStyle).on('change', reload); //與browser同步
     watch('./app/**/*.html', includeHtml).on('change', reload); //與browser同步
     watch('./app/img/*', imgStyle).on('change', reload); //與browser同步
     watch('./app/js/*.js', jsStyle).on('change', reload); //與browser同步
