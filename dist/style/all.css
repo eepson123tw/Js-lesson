@@ -1,6 +1,7 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  list-style: none; }
 
 html,
 body {
@@ -89,10 +90,6 @@ a {
     margin-left: 20%;
     font-size: 3vh;
     color: #da6c6c; }
-
-input {
-  padding: 10px 20px;
-  font-size: 3vh; }
 
 .no-gutter .col-1, .no-gutter .col-2, .no-gutter .col-3, .no-gutter .col-4, .no-gutter .col-5, .no-gutter .col-6, .no-gutter .col-7, .no-gutter .col-8, .no-gutter .col-9, .no-gutter .col-10, .no-gutter .col-11, .no-gutter .col-12, .no-gutter .col-xs-1, .no-gutter .col-xs-2, .no-gutter .col-xs-3, .no-gutter .col-xs-4, .no-gutter .col-xs-5, .no-gutter .col-xs-6, .no-gutter .col-xs-7, .no-gutter .col-xs-8, .no-gutter .col-xs-9, .no-gutter .col-xs-10, .no-gutter .col-xs-11, .no-gutter .col-xs-12, .no-gutter .col-sm-1, .no-gutter .col-sm-2, .no-gutter .col-sm-3, .no-gutter .col-sm-4, .no-gutter .col-sm-5, .no-gutter .col-sm-6, .no-gutter .col-sm-7, .no-gutter .col-sm-8, .no-gutter .col-sm-9, .no-gutter .col-sm-10, .no-gutter .col-sm-11, .no-gutter .col-sm-12, .no-gutter .col-md-1, .no-gutter .col-md-2, .no-gutter .col-md-3, .no-gutter .col-md-4, .no-gutter .col-md-5, .no-gutter .col-md-6, .no-gutter .col-md-7, .no-gutter .col-md-8, .no-gutter .col-md-9, .no-gutter .col-md-10, .no-gutter .col-md-11, .no-gutter .col-md-12, .no-gutter .col-lg-1, .no-gutter .col-lg-2, .no-gutter .col-lg-3, .no-gutter .col-lg-4, .no-gutter .col-lg-5, .no-gutter .col-lg-6, .no-gutter .col-lg-7, .no-gutter .col-lg-8, .no-gutter .col-lg-9, .no-gutter .col-lg-10, .no-gutter .col-lg-11, .no-gutter .col-lg-12, .no-gutter .col-xl-1, .no-gutter .col-xl-2, .no-gutter .col-xl-3, .no-gutter .col-xl-4, .no-gutter .col-xl-5, .no-gutter .col-xl-6, .no-gutter .col-xl-7, .no-gutter .col-xl-8, .no-gutter .col-xl-9, .no-gutter .col-xl-10, .no-gutter .col-xl-11, .no-gutter .col-xl-12 {
   margin: 0;

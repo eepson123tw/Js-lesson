@@ -1,0 +1,210 @@
+.tacket {
+    margin: 0 auto;
+    margin-top: 120px;
+    box-shadow: 0px 3px 6px #00000029;
+    max-width: 920px;
+    padding: 20px 50px;
+    display: flex;
+    &__img {
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid #00807E;
+        margin-bottom: 30px;
+    }
+    &__add {
+        min-width: 350px;
+    }
+    &__form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    &__formText {
+        color: #00807E;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    &__formInput {
+        border: none;
+        border-bottom: 1px solid #00807E;
+        padding: 10px 30px;
+        font-size: 16px;
+        color: #818A91;
+        &:focus {
+            outline: none;
+            border: 1px solid #26BFC7;
+            border-radius: 5px;
+        }
+    }
+    &__waringText {
+        position: absolute;
+        left: 28%;
+        bottom: -23px;
+        font-size: 14px;
+        color: #C43A3A;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    &__waringText-alert {
+        opacity: 1;
+    }
+    &__formSelect {
+        border: none;
+        border-bottom: 1px solid #00807E;
+        padding: 10px 30px;
+        width: 73%;
+        font-size: 16px;
+        color: #818A91;
+        outline: none;
+    }
+    &__formArea {
+        border: none;
+        border-bottom: 1px solid #00807E;
+        padding-top: 10px;
+        padding-left: 30px;
+        font-size: 16px;
+        color: #818A91;
+        width: 65%;
+        &:focus {
+            outline: none;
+            border: 1px solid #26BFC7;
+            border-radius: 5px;
+        }
+    }
+    &__addBtn {
+        padding: 5px 20px;
+        border-radius: 5px;
+        font-size: 20px;
+        color: white;
+        background-color: #00807E;
+        outline: none;
+        border: none;
+        margin-left: 60%;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}
+
+.search {
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    &__bar {
+        margin-left: 20%;
+        padding: 5px 20px;
+        border-radius: 5px;
+        font-size: 20px;
+        outline: none;
+        border: 1px solid #CED4DA;
+        color: #818A91;
+    }
+    &__text {
+        font-size: 16px;
+        margin-left: 50px;
+        color: #818A91;
+    }
+    &__circle {
+        width: 50%;
+    }
+}
+
+.card {
+    padding: 20px;
+    justify-content: space-between;
+    &__core {
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+        background-color: white;
+        box-shadow: 0px 3px 6px #00000029;
+        padding: 0;
+        position: relative;
+    }
+    &__area {
+        position: absolute;
+        top: -10px;
+        left: 0px;
+        font-size: 20px;
+        padding: 2px 20px;
+        background-color: #64C3BF;
+        color: white;
+        border-radius: 5px;
+    }
+    &__point {
+        position: absolute;
+        top: 35%;
+        left: 0;
+        padding: 3px 5px;
+        font-size: 16px;
+        background-color: #00807E;
+        color: white;
+    }
+    &__script {
+        padding: 10px;
+    }
+    &__scriptTitle {
+        font-size: 24px;
+        color: #00807E;
+        position: relative;
+        z-index: 0;
+        margin-bottom: 5px;
+        &::after {
+            display: block;
+            content: "";
+            border-bottom: 2px solid#00807E;
+            position: absolute;
+            width: 100%;
+            bottom: 5px;
+            z-index: 2;
+        }
+    }
+    &__scriptText {
+        font-size: 16px;
+        color: #818A91;
+        line-height: 1.5;
+    }
+    &__footer {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__footerText {
+        color: #00807E;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    &__footerPrice {
+        color: #00807E;
+        font-size: 16px;
+        font-weight: 700;
+        &-big {
+            font-size: 32px;
+            font-weight: 900;
+        }
+    }
+}
+
+.fa-plus-circle {
+    color: #00807E;
+    margin-right: 5px;
+}
+
+.primary {
+    color: #00807E;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}

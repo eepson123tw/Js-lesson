@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    // list-style: none;
+    list-style: none;
 }
 
 html,
@@ -113,9 +113,8 @@ a {
     }
 }
 
-input {
-    padding: 10px 20px;
-    font-size: 3vh;
-}
-
+// input {
+//     padding: 10px 20px;
+//     font-size: 3vh;
+// }
 @import 'utilities/rwd'
