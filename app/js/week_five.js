@@ -107,7 +107,7 @@ const getData = (val) => {
     let array = [];
     let num = 1;
     val.forEach((item) => {
-        obj[item.area] = (obj[item.area] == undefined) ? 1 : (num += 1);
+        obj[item.area] = (obj[item.area] == undefined) ? 1 : (obj[item.area] += 1);
     })
     for (let num in obj) {
         array.push([num, obj[num]])
